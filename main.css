@@ -18,7 +18,7 @@ body {
   line-height: 1.5;
 }
 
-/* ── INDEX PAGE: centered layout ── */
+/* ── INDEX PAGE ── */
 body.home {
   height: 100vh;
   display: flex;
@@ -26,9 +26,7 @@ body.home {
   justify-content: center;
 }
 
-body.home .center {
-  text-align: center;
-}
+body.home .center { text-align: center; }
 
 body.home h1 {
   font-size: 3rem;
@@ -73,31 +71,74 @@ body.home a:hover { color: var(--navy); }
 }
 
 .page-content {
-  max-width: 800px;
+  max-width: 860px;
   margin: 32px auto;
   padding: 0 24px;
 }
 
 .page-content h3 {
   color: var(--navy);
-  font-size: 1.1rem;
-  margin-top: 28px;
-  margin-bottom: 8px;
-  padding-bottom: 4px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 0;
+  padding-bottom: 6px;
   border-bottom: 2px solid var(--gold);
 }
 
+/* ── MEMBER LIST ── */
 .members-list {
-  list-style: decimal;
-  padding-left: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.members-list li {
-  padding: 5px 0;
+.member-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border);
 }
 
-.members-list li:last-child { border-bottom: none; }
+.member-item:last-child { border-bottom: none; }
+
+.member-img-left,
+.member-img-right {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #eee;
+}
+
+.member-img-right { margin-left: auto; }
+
+.member-info {
+  flex: 1;
+}
+
+.member-info strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.member-info p {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.member-info p span {
+  font-weight: 600;
+}
+
+.member-number {
+  font-size: 0.9rem;
+  color: #aaa;
+  flex-shrink: 0;
+}
 
 /* ── FOOTER ── */
 .page-footer {
