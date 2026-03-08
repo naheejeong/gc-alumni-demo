@@ -1,22 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #003262;
+  --gold: #FDB515;
+  --text: #222222;
+  --muted: #555;
+  --border: #ddd;
+}
+
 body {
-  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.5;
+}
+
+/* ── INDEX PAGE: centered layout ── */
+body.home {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: sans-serif;
 }
 
-.center {
+body.home .center {
   text-align: center;
 }
 
-h1 {
+body.home h1 {
   font-size: 3rem;
-  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 10px;
 }
 
-a {
+body.home a {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--muted);
+  text-decoration: underline;
 }
+
+body.home a:hover { color: var(--navy); }
+
+/* ── ALUMNI PAGE ── */
+
+.page-logo {
+  background: var(--navy);
+  padding: 12px 24px;
+}
+
+.page-logo a {
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.page-nav {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 24px 12px;
+}
+
+.page-nav h1 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.page-content {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+.page-content h3 {
+  color: var(--navy);
+  font-size: 1.1rem;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.members-list {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.members-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.members-list li:last-child { border-bottom: none; }
+
+/* ── FOOTER ── */
+.page-footer {
+  margin-top: 48px;
+  background: var(--navy);
+  color: rgba(255,255,255,0.7);
+  padding: 20px 24px;
+  font-size: 0.85rem;
+}
+
+.page-footer p + p { margin-top: 4px; }
